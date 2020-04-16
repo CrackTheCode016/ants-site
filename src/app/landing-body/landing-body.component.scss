@@ -8,7 +8,6 @@
   padding-bottom: 2rem;
 }
 
-
 .display {
   color: #f8f8f8;
   font-size: 84px;
@@ -21,8 +20,6 @@
   line-height: 1.0;
   font-size: 48px;
 }
-
-
 
 mat-card img {
   max-height: 90px;
@@ -177,12 +174,6 @@ mat-card {
   display: flex;
 }
 
-.spacer {
-  display: flex;
-  margin: 10px;
-  height: 5px;
-  background-color: #3164d5;
-}
 
 .how-works mat-card-header,
 mat-card-content {

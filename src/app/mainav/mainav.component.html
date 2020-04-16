@@ -7,7 +7,7 @@
         <img routerLink="/" class="logo" src="assets/ants-logo.png">
       </button></mat-toolbar>
     <mat-nav-list fxLayout="column" fxFlexAlign="left">
-      <button mat-button routerLink="/maps">COVID-19</button>
+      <button mat-button routerLink="/covid">COVID-19</button>
       <button mat-button disabled>Open Data Viewer (coming soon)</button>
       <button mat-button disabled>Register as an Ant (coming soon)</button>
     </mat-nav-list>
@@ -23,7 +23,7 @@
       </button>
       <div class="right"></div>
       <div [ngClass]="{ hidden: (isHandset$ | async) }">
-        <button mat-flat-button color="accent" routerLink="/maps">COVID-19</button>
+        <button mat-flat-button color="accent" routerLink="/covid">COVID-19</button>
         <button mat-flat-button disabled>Open Data Viewer (coming soon)</button>
         <button mat-flat-button disabled color="primary">Register as an Ant (coming soon)</button>
       </div>

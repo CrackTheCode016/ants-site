@@ -81,12 +81,28 @@ $custom-typography: mat-typography-config($font-family: 'Comfortaa, monospace',
   color: mat-color($primary) !important;
 }
 
+.spacer {
+  display: flex;
+  height: 5px;
+  max-width: 20%;
+  margin-bottom: 20px;
+  background-color: #5AB1FF;
+}
+
 html,
 body {
   font-family: 'Comfortaa', sans-serif !important;
   padding: 0;
   height: 100%;
   width: 100%;
+}
+
+.loader {
+  height: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 html {

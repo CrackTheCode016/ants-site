@@ -25,6 +25,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MainavComponent } from './mainav/mainav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { CovidComponent } from './covid/covid.component';
+import { CovidStatComponent } from './covid-stat/covid-stat.component';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+
 
 
 @NgModule({
@@ -34,12 +39,15 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     LandingBodyComponent,
     MapsComponent,
     MapPopupComponent,
-    MainavComponent
+    MainavComponent,
+    CovidComponent,
+    CovidStatComponent
   ],
   imports: [
     NgxMapboxGLModule.withConfig({
       accessToken: 'pk.eyJ1IjoiY3JhY2t0aGVjb2RlIiwiYSI6ImNrODdjOWtyMTBtem0zZ2tsOG1nNzFyYm8ifQ.1I07CbFC-mWRwSIpZ47QPg'
     }),
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -57,7 +65,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatBottomSheetModule,
     FlexLayoutModule,
     LayoutModule,
-    MatSidenavModule
+    MatSidenavModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

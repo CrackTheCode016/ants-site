@@ -10,20 +10,9 @@ mgl-map {
   flex-direction: column;
 }
 
-.loader {
-  height: 500px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .filter-contain {
   display: flex;
   flex: 2 1;
-}
-
-.info, .info mat-card {
 }
 
 mat-select {

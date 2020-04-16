@@ -16,11 +16,6 @@
       </div>
     </mat-toolbar-row>
   </mat-toolbar>
-
-  <div *ngIf="!loaded" class="loader">
-    <mat-spinner></mat-spinner>
-  </div>
-
   <mgl-map *ngIf="data" [style]="'mapbox://styles/mapbox/dark-v10'">
     <mgl-layer id="covid" type="heatmap" [source]="data" [paint]="paint"></mgl-layer>
     <mgl-layer id="covid-detail" type="circle" (click)="onClick($event)" [source]="data" [minzoom]="2" [paint]="{
@@ -47,35 +42,4 @@
       }
     }"></mgl-layer>
   </mgl-map>
-</div>
-<div class="info">
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title>Dataset Info</mat-card-title>
-      <mat-card-subtitle>Current dataset is fetched from {{ archiveName }} under schema {{ schemaName }}
-      </mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <mat-list role="list">
-        <mat-list-item role="listitem">
-          <mat-form-field>
-            <mat-label>Available Datasets</mat-label>
-            <mat-select [(value)]="datasetType" (selectionChange)="onDatasetChange($event)">
-              <mat-option value="covid">Worldwide (JSU dataset)</mat-option>
-              <mat-option value="uscovid">United States (covidtracker.com dataset)</mat-option>
-            </mat-select>
-          </mat-form-field>
-        </mat-list-item>
-        <mat-list-item role="listitem">
-          Report upload timestamp: {{ reportDate }}
-        </mat-list-item>
-        <mat-list-item role="listitem">
-          Report sender: {{ reporter }}
-        </mat-list-item>
-        <mat-list-item role="listitem">
-          Current report hash: {{ reportHash }}
-        </mat-list-item>
-      </mat-list>
-    </mat-card-content>
-  </mat-card>
 </div>

@@ -1,0 +1,67 @@
+<div class="header">
+  <h1>COVID-19 Tracker</h1>
+  <div class="spacer"></div>
+  <p>Authentic, traceable, and verfied COVID-19 data. Powered by the Symbol blockchain and the ANT$ protocol</p>
+</div>
+
+<div fxLayout fxLayout.xs="column" fxFlexAlign="center" class="stats-grid">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        <img class="live" src="assets/live.png">
+        <h2>Worldwide</h2>
+      </mat-card-title>
+      <mat-card-subtitle>
+        <p>Report ID: {{ worldWidereportHash }}</p>
+        <p> Last checked: {{ worldWideReportUpload }}</p>
+        <p>Verified Reporter: {{ worldWideSender }}</p>
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content fxLayout>
+      <div fxFlex="50%">
+        <app-covid-stat footerName="Confirmed" [headerCount]="totalConfirmed"></app-covid-stat>
+        <app-covid-stat footerName="Recoveries" [headerCount]="totalRecovery"></app-covid-stat>
+      </div>
+      <div fxFlex="50%">
+        <app-covid-stat footerName="Deaths" [headerCount]="totalDeath"></app-covid-stat>
+        <app-covid-stat footerName="Active" [headerCount]="totalActive"></app-covid-stat>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header fxLayout="column">
+      <mat-card-title>
+        <img class="live" src="assets/live.png">
+        <h2>US Testing Results</h2>
+      </mat-card-title>
+      <mat-card-subtitle>
+        <p>Report ID: {{ USreportHash }}</p>
+        <p>Last checked: {{ USReportUpload }}</p>
+        <p>Verified Reporter: {{ USSender }}</p>
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div fxFlex="50%">
+        <app-covid-stat footerName="In ICU" [headerCount]="USIcu"></app-covid-stat>
+        <app-covid-stat footerName="On Ventilator" [headerCount]="USVent"></app-covid-stat>
+      </div>
+      <div fxFlex="50%">
+        <app-covid-stat footerName="Deaths" [headerCount]="UStotalDeath"></app-covid-stat>
+        <app-covid-stat footerName="Positive" [headerCount]="UStotalConfirmed"></app-covid-stat>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div class="header">
+  <h1>Worldwide Map</h1>
+  <div class="spacer"></div>
+  <p>Click the pins view more details about each location</p>
+</div>
+
+<div class="map">
+  <div *ngIf="!loaded" class="loader">
+    <mat-spinner></mat-spinner>
+  </div>
+  <app-maps *ngIf="allReports.length !== 0" [covidPoints]="allReports"></app-maps>
+</div>
