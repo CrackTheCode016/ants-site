@@ -1,1 +1,126 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;515&display=swap');
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$primary: (50 : #e1f7fc,
+  100 : #b5ecf8,
+  200 : #83e0f3,
+  300 : #51d3ee,
+  400 : #2cc9eb,
+  500 : #07c0e7,
+  600 : #06bae4,
+  700 : #05b2e0,
+  800 : #04aadd,
+  900 : #029cd7,
+  A100 : #feffff,
+  A200 : #cbefff,
+  A400 : #98dfff,
+  A700 : #7fd7ff,
+  contrast: (50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  ));
+
+$accent: (50 : #ffe8eb,
+  100 : #ffc6ce,
+  200 : #ffa0ad,
+  300 : #ff7a8c,
+  400 : #ff5e74,
+  500 : #ff415b,
+  600 : #ff3b53,
+  700 : #ff3249,
+  800 : #ff2a40,
+  900 : #ff1c2f,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #ffcdd0,
+  A700 : #ffb3b8,
+  contrast: (50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  ));
+
+$ants-theme-primary: mat-palette($primary);
+$ants-theme-accent: mat-palette($accent);
+
+$ants-theme: mat-light-theme($ants-theme-primary, $ants-theme-accent);
+
+$custom-typography: mat-typography-config($font-family: 'Comfortaa, monospace',
+  $headline: mat-typography-level(64px, 48px, 700),
+  $body-1: mat-typography-level(16px, 24px, 500));
+@include mat-base-typography($custom-typography);
+@include mat-checkbox-typography($custom-typography);
+@include angular-material-typography($custom-typography);
+@include angular-material-theme($ants-theme);
+
+.primary-color {
+  color: mat-color($primary) !important;
+}
+
+html,
+body {
+  font-family: 'Comfortaa', sans-serif !important;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: 'Comfortaa', sans-serif !important;
+}
+
+.logo {
+  max-height: 50px;
+}
+
+mat-toolbar {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  padding: 8px !important;
+}
+
+.right {
+  flex: 1 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .logo {
+    max-height: 40px;
+  }
+}
+
+
+// button {
+//   box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.15) !important;
+// }

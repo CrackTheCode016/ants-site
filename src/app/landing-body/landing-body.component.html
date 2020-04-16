@@ -1,0 +1,120 @@
+<div class="header">
+  <div fxLayout="row" fxLayout.xs="column" class="header-content">
+    <div fxLayout.xs="column" class="header-text" fxFlex="67%">
+      <h1 class="display">Decentralized, Permissioned Data Aggregation</h1>
+      <h2 class="sub-display">Incentivized Data Gathering With ANT$</h2>
+      <button mat-raised-button color="primary">Become an Ant</button>
+    </div>
+    <img fxFlex="33%" class="right-img" src="assets/whiteants.png">
+  </div>
+</div>
+<div class="more-info">
+  <mat-toolbar fxLayout="column" fxLayout.xs="row">
+    <br>
+    <span>We are tracking COVID-19 through the ANT$ Protocol - Take a look!</span>
+    <a href="maps"><button mat-raised-button routerLink="/maps" color="accent">COVID-19 Tracker</button></a>
+  </mat-toolbar>
+</div>
+<div class="how-works">
+  <mat-card class="no-style">
+    <mat-card-header>
+      <mat-card-title>
+        <h1 class="mat-display-1">What is ANT$?
+          <div class="spacer"></div>
+        </h1>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content fxLayout fxFlexAlign="center">
+      <div class="spacer"></div>
+      <p fxFlex class="mat-body">ANTS is a new method of collecting information from a distributed, incentivized array
+        of
+        sources. Users, referred to as the “ants”, are able to breathe rewarded by contributing to an open data market.
+        Much like the biological ant, The ANT$ system depends on the distribution of ants over a specific area to report
+        and relay information.</p>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div class="body">
+  <div class="background"></div>
+  <div class="info-cards">
+    <mat-card>
+      <img src="assets/ants-checkmark@2x.png">
+      <mat-card-header>
+        <mat-card-title>Authenticated Data Reports</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Using strict on-chain permissions, only authorized data sources are let through to be recorded on chain. This
+          helps avoid the spread of misinformation.</p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card>
+      <img src="assets/ants-upload@2x.png">
+      <mat-card-header>
+        <mat-card-title>Co-owned Data Archives</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Data reports are sent to on-chain data archives, which are represented by human-readable, unique, on-chain
+          domains. These domains are able to be co-owned by multiple entities</p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card>
+      <img src="assets/ants-ledger@2x.png">
+      <mat-card-header>
+        <mat-card-title>Fault-Tolerant Ledger</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>All actions are recorded on Symbol’s secure, fault-tolerant ledger. Data is distributed amongst multiple
+          nodes to ensure total uptime and accessibility.</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<div fxLayout="column" fxFlexAlign="center" class="covid">
+  <h2 class="sub-display">COVID-19 Data On The Symbol Blockchain</h2>
+  <a href="maps"><button mat-raised-button color="accent">We're tracking COVID-19 on ANT$ - See here!</button></a>
+</div>
+
+<div class="status">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        <p class="mat-display-1">
+          Network Status -
+          <span class="primary-color">LIVE</span>
+        </p>
+      </mat-card-title>
+      <mat-card-subtitle *ngIf="filteredOnline">ANT$ runs on IoDLT's Symbol Devnet. Learn more about the <a
+          target="_blank" href="https://nemtech.github.io">Symbol blockchain here</a> - there are currently
+        {{ filteredOnline }} nodes online </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list role="list">
+        <mat-list-item *ngFor="let status of nodeStatues" role="listitem">
+          <mat-icon color="primary" *ngIf="status.up">verified_user</mat-icon>
+          <mat-icon color="accent" *ngIf="!status.up">offline_bolt</mat-icon>
+          {{ status.node }}
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div class="contact">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Contact</mat-card-title>
+      <mat-card-subtitle></mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Find a bug, have a suggestion, or want to chat? Shoot us an email!</p>
+      <a href="mailto:contact@iodlt.com"><button mat-raised-button color="primary">contact@iodlt.com</button></a>
+    </mat-card-content>
+    <mat-card-actions>
+    </mat-card-actions>
+  </mat-card>
+</div>

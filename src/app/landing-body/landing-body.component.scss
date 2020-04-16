@@ -1,0 +1,243 @@
+.header {
+  color: #f8f8f8;
+  background-image: linear-gradient(0deg,
+      rgba(82, 0, 198, 1) 0%,
+      rgba(0, 211, 238, 0.8) 100%),
+    url("../../assets/antsback@2x.png");
+  background-size: cover;
+  padding-bottom: 2rem;
+}
+
+
+.display {
+  color: #f8f8f8;
+  font-size: 84px;
+  max-width: 800px;
+  line-height: 1.0;
+}
+
+.sub-display {
+  color: #f8f8f8;
+  line-height: 1.0;
+  font-size: 48px;
+}
+
+
+
+mat-card img {
+  max-height: 90px;
+  padding: 20px;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/antsback@2x.png");
+  background-size: cover;
+  opacity: 0.15;
+  z-index: -1;
+}
+
+.right-img {
+  height: auto;
+  width: 100%;
+  align-self: center;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .status {
+    padding: 0px;
+  }
+
+  .status mat-card {
+    padding: 0px;
+  }
+
+  .mid-content {
+    font-size: medium;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .display {
+    font-size: 40px;
+  }
+
+  .sub-display {
+    font-size: 32px;
+  }
+
+
+  .body {
+    padding: 0;
+  }
+
+  .header .header-content {
+    display: block;
+  }
+
+  .body .info-cards {
+    margin: 0px;
+  }
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .header .background {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .header .background {
+    width: auto;
+    height: 100%;
+  }
+}
+
+.header .header-content {
+  display: flex;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.header-text h1 {
+  margin-bottom: 30px;
+}
+
+mat-card {
+  flex: 1;
+}
+
+.body mat-card-content {
+  padding: 20px;
+}
+
+.coverup {
+  height: 100px;
+  background-color: #f8f8f8;
+}
+
+.body {
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.body .info-cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  flex: 3;
+}
+
+.body .info-cards mat-card {
+  margin: 10px;
+}
+
+.more-info mat-toolbar {
+  color: #333333;
+  font-size: medium;
+  height: auto;
+  padding: 16px;
+  flex-wrap: wrap;
+}
+
+.contact {
+  display: flex;
+  margin: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact mat-card {
+  width: 60%;
+  padding: 50px;
+}
+
+.how-works {
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.how-works mat-card {
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+  margin-top: 20px;
+}
+
+.how-works mat-card-content {
+  display: flex;
+}
+
+.spacer {
+  display: flex;
+  margin: 10px;
+  height: 5px;
+  background-color: #3164d5;
+}
+
+.how-works mat-card-header,
+mat-card-content {
+  justify-content: center;
+  align-items: center;
+}
+
+.no-style {
+  box-shadow: none !important;
+}
+
+mat-toolbar .mat-toolbar-row,
+.mat-toolbar-single-row {
+  white-space: normal;
+}
+
+.contact mat-card-title {
+  font-size: 30px;
+}
+
+.contact mat-card-content p {
+  font-size: 15px;
+}
+
+.status {
+  padding: 50px;
+}
+
+.status span {
+  color: #04aadd;
+}
+
+.status mat-card {
+  padding: 50px;
+}
+
+.map-img {
+  height: auto;
+  width: 50%;
+}
+
+.covid {
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  height: 50%;
+  width: 100%;
+  background-image: linear-gradient(0deg,
+      rgba(82, 0, 198, 1) 0%,
+      rgba(0, 211, 238, 0.8) 100%),
+    url("../../assets/map.png");
+  background-position: center;
+}
+
+.mat-body {
+  text-align: center;
+  font-size: 18px;
+}

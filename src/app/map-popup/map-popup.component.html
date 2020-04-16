@@ -1,0 +1,18 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ data.country_region }}, {{ data.province_state }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list role="list">
+      <mat-list-item role="listitem">
+        Confirmed: {{ data.confirmed }}
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        Deaths: {{ data.deaths }}
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        Recovered: {{ data.recovered }}
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
